@@ -31,8 +31,5 @@ public class Patient {
     private String dateOfBirth;
 
     @NotNull
-    private String gender;
-
-    @NotNull
     private LocalDate registrationDate;
 }

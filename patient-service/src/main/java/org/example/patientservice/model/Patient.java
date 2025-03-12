@@ -28,8 +28,8 @@ public class Patient {
     private String address;
 
     @NotNull
-    private String dateOfBirth;
+    private LocalDate dateOfBirth;
 
     @NotNull
-    private LocalDate registrationDate;
+    private LocalDate registeredDate;
 }

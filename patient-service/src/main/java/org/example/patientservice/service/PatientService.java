@@ -53,8 +53,8 @@ public class PatientService {
         patient.setAddress(patientRequestDTO.getAddress());
         patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
 
-        patientRepository.save(patient);
-        return PatientMapper.toPatientResponseDTO(patient);
+        Patient updatedPatient = patientRepository.save(patient);
+        return PatientMapper.toPatientResponseDTO(updatedPatient);
     }
 
     public void deletePatient(UUID id) {

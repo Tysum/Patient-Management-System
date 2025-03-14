@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.example.patientservice.dto.validators.CreatePatientValidationGroup;
 
 @Data
 public class PatientRequestDTO {
@@ -22,6 +23,6 @@ public class PatientRequestDTO {
     @NotBlank(message = "Date of Birth is required")
     private String dateOfBirth;
 
-    @NotBlank(message = "Registered Date is required")
+    @NotBlank(groups = CreatePatientValidationGroup.class, message = "Registered Date is required")
     private String registeredDate;
 }
